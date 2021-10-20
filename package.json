@@ -1,0 +1,32 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "GraphQl implementation of minimal production server",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.tests.ts",
+    "start": "ts-node index.ts",
+    "coverage": "nyc -r lcov -e .ts -x \"*.tests.ts\"npm run test"
+  },
+  "repository": "basic-graphql-server",
+  "author": "kawekaweau",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/winston": "^2.4.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^15.6.1",
+    "graphql-helix": "^1.8.3",
+    "module-alias": "^2.2.2",
+    "typescript": "^4.4.4",
+    "winston": "^3.3.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@utils": "build/src/utils",
+    "@configs": "build/configs"
+  },
+  "private": false
+}
